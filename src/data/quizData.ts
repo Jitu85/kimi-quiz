@@ -11,9 +11,9 @@ export interface Question {
 }
 
 export const SUBJECTS = [
-  { id: 'science', name: 'Science', icon: 'FlaskConical', color: '#30B0D0', image: '/images/science-bg.jpg' },
-  { id: 'maths', name: 'Mathematics', icon: 'Calculator', color: '#E8A838', image: '/images/maths-bg.jpg' },
-  { id: 'english', name: 'English', icon: 'BookOpen', color: '#E07050', image: '/images/english-bg.jpg' },
+  { id: 'science', name: 'Science', icon: 'FlaskConical', color: '#30B0D0', image: 'images/science-bg.jpg' },
+  { id: 'maths', name: 'Mathematics', icon: 'Calculator', color: '#E8A838', image: 'images/maths-bg.jpg' },
+  { id: 'english', name: 'English', icon: 'BookOpen', color: '#E07050', image: 'images/english-bg.jpg' },
 ] as const;
 
 export const CLASS_LEVELS = [2, 3, 4, 5, 6] as const;
