@@ -275,12 +275,20 @@ export default function LandingPage() {
         </div>
 
         {/* Footer tagline */}
-        <p
-          className="mt-10 font-mono text-center"
-          style={{ fontSize: '11px', color: 'rgba(155,163,168,0.5)', letterSpacing: '0.1em' }}
-        >
-          FOR STUDENTS OF CLASSES 2 - 6
-        </p>
+        <div className="mt-10 flex flex-col items-center gap-2">
+          <p
+            className="font-mono text-center"
+            style={{ fontSize: '11px', color: 'rgba(155,163,168,0.5)', letterSpacing: '0.1em' }}
+          >
+            FOR STUDENTS OF CLASSES 2 - 6
+          </p>
+          <p
+            className="font-sans text-center font-light"
+            style={{ fontSize: '11px', color: 'rgba(237, 232, 228, 0.45)', letterSpacing: '0.05em' }}
+          >
+            Designed & Developed by <span className="font-medium text-cyan-400/90" style={{ textShadow: '0 0 10px rgba(34,211,238,0.2)' }}>Abhijit Kumar Misra</span>
+          </p>
+        </div>
       </div>
     </div>
   );
