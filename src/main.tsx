@@ -1,6 +1,10 @@
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.tsx'
+import { initGA } from './lib/analytics'
+
+// Initialize Google Analytics
+initGA();
 
 // Global error handlers to display runtime errors on screen
 window.addEventListener('error', (event) => {
