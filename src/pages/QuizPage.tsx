@@ -140,6 +140,24 @@ export default function QuizPage() {
       >
         <div className="max-w-4xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-3">
+            <button
+              onClick={() => {
+                if (window.confirm("Are you sure you want to exit the quiz? Your current exam progress will be lost and you will be logged out.")) {
+                  dispatch({ type: 'LOGOUT' });
+                }
+              }}
+              className="font-sans px-2.5 py-1 hover:bg-white/10 transition-colors"
+              style={{
+                background: 'rgba(255,255,255,0.05)',
+                border: '1px solid rgba(255,255,255,0.1)',
+                borderRadius: '6px',
+                color: '#EDE8E4',
+                fontSize: '11px',
+                cursor: 'pointer',
+              }}
+            >
+              Logout
+            </button>
             <span className="font-mono" style={{ fontSize: '12px', color: '#9BA3A8', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
               {subject.charAt(0).toUpperCase() + subject.slice(1)} &middot; Class {classLevel}
             </span>

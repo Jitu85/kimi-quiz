@@ -111,6 +111,20 @@ export default function DashboardPage() {
                   {state.examResults.length} exams
                 </span>
               </div>
+              <button
+                onClick={() => dispatch({ type: 'LOGOUT' })}
+                className="font-sans px-3 py-1.5 hover:bg-white/10 transition-colors"
+                style={{
+                  background: 'rgba(255,255,255,0.05)',
+                  border: '1px solid rgba(255,255,255,0.1)',
+                  borderRadius: '20px',
+                  color: '#EDE8E4',
+                  fontSize: '12px',
+                  cursor: 'pointer',
+                }}
+              >
+                Logout
+              </button>
             </div>
           </div>
           <p className="font-sans" style={{ fontSize: '14px', color: '#9BA3A8' }}>
@@ -213,7 +227,7 @@ export default function DashboardPage() {
                 >
                   <div>
                     <h3 className="font-sans font-semibold text-sm text-cyan-400 uppercase tracking-wider">Easy Level</h3>
-                    <p className="font-sans text-xs text-gray-400 mt-1">30 Questions &middot; 150 Mins</p>
+                    <p className="font-sans text-xs text-gray-400 mt-1">30 Questions &middot; 150 Seconds</p>
                   </div>
                   {getExamResult(selectedSubject, selectedClass, 'Easy') && (
                     <span className="font-mono text-xs text-green-400 font-semibold px-2 py-1 rounded bg-green-500/10 border border-green-500/20">
@@ -233,7 +247,7 @@ export default function DashboardPage() {
                 >
                   <div>
                     <h3 className="font-sans font-semibold text-sm text-yellow-500 uppercase tracking-wider">Hard Level</h3>
-                    <p className="font-sans text-xs text-gray-400 mt-1">30 Questions &middot; 150 Mins</p>
+                    <p className="font-sans text-xs text-gray-400 mt-1">30 Questions &middot; 120 Seconds</p>
                   </div>
                   {getExamResult(selectedSubject, selectedClass, 'Hard') && (
                     <span className="font-mono text-xs text-green-400 font-semibold px-2 py-1 rounded bg-green-500/10 border border-green-500/20">

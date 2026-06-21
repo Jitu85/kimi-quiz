@@ -116,6 +116,22 @@ export default function ProfilePage() {
       className="min-h-screen w-full flex flex-col items-center justify-center px-4 py-8"
       style={{ background: 'linear-gradient(135deg, #050A0F 0%, #0A1628 50%, #0D1F35 100%)' }}
     >
+      {/* Back to Login */}
+      <button
+        onClick={() => dispatch({ type: 'LOGOUT' })}
+        className="mb-6 font-sans px-4 py-2 hover:bg-white/10 transition-colors"
+        style={{
+          background: 'rgba(255,255,255,0.04)',
+          border: '1px solid rgba(255,255,255,0.1)',
+          borderRadius: '10px',
+          color: '#EDE8E4',
+          fontSize: '13px',
+          cursor: 'pointer',
+        }}
+      >
+        &larr; Change Name
+      </button>
+
       {/* Greeting */}
       <h2
         ref={greetingRef}

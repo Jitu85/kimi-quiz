@@ -406,6 +406,22 @@ export default function ResultsPage() {
               Retake Exam
             </button>
           </div>
+
+          <button
+            onClick={() => dispatch({ type: 'LOGOUT' })}
+            className="w-full mt-4 font-sans flex items-center justify-center gap-2 transition-all duration-300"
+            style={{
+              background: 'rgba(224,112,80,0.1)',
+              border: '1px solid rgba(224,112,80,0.2)',
+              borderRadius: '10px',
+              padding: '14px',
+              color: '#E07050',
+              fontSize: '13px',
+              cursor: 'pointer',
+            }}
+          >
+            Logout / Change User
+          </button>
         </div>
       </div>
     </div>

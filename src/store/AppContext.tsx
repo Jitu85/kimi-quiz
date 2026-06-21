@@ -69,7 +69,8 @@ type Action =
   | { type: 'UPDATE_TIMER'; timer: number }
   | { type: 'FINISH_QUIZ'; score: number; correctAnswers: number; timeTaken: number }
   | { type: 'RESET_QUIZ' }
-  | { type: 'GO_HOME' };
+  | { type: 'GO_HOME' }
+  | { type: 'LOGOUT' };
 
 const initialState: QuizState = {
   currentPage: 'landing',
@@ -174,6 +175,8 @@ function quizReducer(state: QuizState, action: Action): QuizState {
         timer: 9000,
         isQuizActive: false,
       };
+    case 'LOGOUT':
+      return initialState;
     default:
       return state;
   }
